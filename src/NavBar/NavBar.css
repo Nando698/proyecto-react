@@ -1,0 +1,25 @@
+.img-logo {
+    width: 9vw;
+    height: auto;
+    margin-left: 2%;
+}
+
+
+.menu {
+    
+    list-style: none;
+    margin-right: 10%;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.main-header {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    box-shadow: 5px 1px 5px rgba(0, 0, 0, 0.438);   
+    padding: 15px 0px 15px 0px;
+    background-color: #ffe8d6;
+}
