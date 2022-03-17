@@ -1,0 +1,15 @@
+.PetFav {
+    display: flex;
+    width: 150px;
+    align-items: center;
+    background-color: #cb997e;
+    border-radius: 10px;
+    
+}
+
+.PetFav p {
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+

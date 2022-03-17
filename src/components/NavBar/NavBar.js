@@ -1,7 +1,8 @@
 import Button from '@mui/material/Button';
-import logo from '../img/logo/perrito.png';
+import logo from '../../img/logo/perrito.png';
 import './NavBar.css';
 import 'animate.css';
+import PetFav from '../PetFav/PetFav';
 
 function NavBar() {
   return (
@@ -10,13 +11,16 @@ function NavBar() {
         
         <img src={logo} alt="" className='img-logo animate__animated animate__backInRight' />
         
+
+        <div><PetFav /></div>
+
         <ul className='menu active'>
           
           <li><Button variant='contained'>Inicio</Button></li>
           <li><Button variant='contained'>Quienes somos</Button></li>
           <li><Button variant='contained'>Encontrá</Button></li>
           <li><Button variant='contained'>Publicá</Button></li>
-
+          
         </ul>
         
       </header>

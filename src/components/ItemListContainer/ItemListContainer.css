@@ -1,0 +1,12 @@
+.ItemListContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+@media only screen and (min-width:720px) {
+    .ItemListContainer {
+        padding-left:100px ;
+    }
+    
+}
