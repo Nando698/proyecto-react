@@ -10,6 +10,7 @@
     padding: 10px;
     width: 15vw;
     overflow: hidden;
+    
 }
 
 .Card:hover {
@@ -17,7 +18,9 @@
 }
 
 .Card img {
-    max-width: 100px;
+    width: auto;
+    max-height:300px;
+    
 }
 
 @media only screen and (max-width:400px) {
