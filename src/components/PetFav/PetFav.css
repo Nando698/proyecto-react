@@ -1,15 +1,30 @@
 .PetFav {
     display: flex;
-    width: 150px;
+    width: 13vw;
     align-items: center;
     background-color: #cb997e;
     border-radius: 10px;
-    
+    justify-content: center;
+    height: 40px;
 }
 
 .PetFav p {
     font-size: large;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
+    text-align: center;
+    
 }
 
+#creditText {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width:769px) {
+    .PetFav {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}

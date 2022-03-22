@@ -1,17 +1,24 @@
 import './Card.css';
+import DonationCount from '../DonationCount/DonationCount';
 
 
-
-export default function Card(props) {
+export default function Card({nombre, especie, edad, tamanio, creditos}) {
     
     return (
 
         <div className='Card'>
-            <h2>{props.nombre}</h2>
+            
+            <div id="imagen">
             <img src='https://st.depositphotos.com/2398521/2608/i/950/depositphotos_26089317-stock-photo-cute-small-dog.jpg' alt=""></img>
-            <p>Edad: {props.edad}</p>
-            <p>Tamaño : {props.tamanio}</p>
-            <button> Agregar a favs </button>
+            </div>
+        <div id="datos">
+            <h2>{nombre}</h2>
+            <p>Especie: {especie}</p>
+            <p>Edad: {edad}</p>
+            <p>Tamaño : {tamanio}</p>
+        </div>   
+            <DonationCount creditos={creditos} nombre={nombre} />
+            <p>Creditos:{creditos}</p>
         </div>
 
     )
