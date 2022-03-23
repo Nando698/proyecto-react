@@ -18,7 +18,7 @@ export default function Card({nombre, especie, edad, tamanio, creditos}) {
             <p>Tamaño : {tamanio}</p>
         </div>   
             <DonationCount creditos={creditos} nombre={nombre} />
-            <p>Creditos:{creditos}</p>
+            
         </div>
 
     )

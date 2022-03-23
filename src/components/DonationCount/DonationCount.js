@@ -5,7 +5,7 @@ import React, {useState} from 'react';
 
 
 export default function DonationCount({creditos, nombre}) {
-    
+   
     const [contador, setContador] = useState(0)
 
 
@@ -35,6 +35,7 @@ export default function DonationCount({creditos, nombre}) {
     <div>
         <Button onClick={donar}>DONAR COMIDA</Button>
     </div>
+    <span>Creditos:{creditos - contador}</span>
 </div>
     )
 }
