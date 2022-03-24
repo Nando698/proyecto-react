@@ -1,4 +1,4 @@
-import PetsIcon from '@mui/icons-material/Pets';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './PetFav.css';
 import { Button } from '@mui/material';
 
@@ -7,11 +7,11 @@ export default function PetFav() {
     return (
     <>
         <div className="PetFav">
-            <PetsIcon fontSize='large' />
-            <p>DONAR COMIDA</p>
+            <ShoppingCartIcon fontSize='large' />
+            <p>Carrito</p>
         </div>
         <div id="creditText">
-            <p>Creditos: 10</p>
+            <p></p>
         </div>
     </>
     );
