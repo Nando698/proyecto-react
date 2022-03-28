@@ -1,0 +1,21 @@
+.list-item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+@media only screen and (max-width:600px) {
+    .divItem {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .list-item {
+        margin: 0;
+        padding: 0;
+    }
+    
+}

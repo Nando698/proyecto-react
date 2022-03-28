@@ -1,23 +1,24 @@
 import './Card.css';
-import DonationCount from '../DonationCount/DonationCount';
+import ItemCount from '../ItemCount/ItemCount';
 
 
-export default function Card({nombre, especie, edad, tamanio, creditos}) {
-    
+export default function Card(product) {
+    console.log(product)
+
+    let stock = 10
     return (
 
         <div className='Card'>
             
             <div id="imagen">
-            <img src='https://st.depositphotos.com/2398521/2608/i/950/depositphotos_26089317-stock-photo-cute-small-dog.jpg' alt=""></img>
+                <img src={product.product.thumbnail} alt=""></img>
             </div>
-        <div id="datos">
-            <h2>{nombre}</h2>
-            <p>Especie: {especie}</p>
-            <p>Edad: {edad}</p>
-            <p>Tamaño : {tamanio}</p>
-        </div>   
-            <DonationCount creditos={creditos} nombre={nombre} />
+            <div id="datos">
+                <h2 className="cardTitle">{product.product.title}</h2>
+                <p className='priceText'>Precio: ${product.product.price}</p>
+                {<p className='cityText'>Zona: {product.product.address.city_name}</p>}
+            </div>   
+            <ItemCount stock={stock} />
             
         </div>
 

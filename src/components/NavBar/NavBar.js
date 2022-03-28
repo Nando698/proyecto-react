@@ -1,27 +1,27 @@
 import Button from '@mui/material/Button';
-import logo from '../../img/logo/perrito.png';
+import logo from '../../img/logo/liebre.png';
 import './NavBar.css';
 import 'animate.css';
 
-import PetFav from '../PetFav/PetFav';
+import Carrito from '../Carrito/Carrito';
 
 function NavBar() {
   return (
     <div className="navbar">
       <header className="main-header">
-        
-        <img src={logo} alt="" className='img-logo animate__animated animate__backInRight' />
-        
+        <div className='img-logo'>
+        <img src={logo} alt="Mercado Liebre" className='img-logo animate__animated animate__backInRight' />
+        <p>MercadoLiebre</p>
+        </div>
 
         
         
         <ul className='menu active'>
           
           <li><Button variant='contained'>Inicio</Button></li>
-          <li><Button variant='contained'>Quienes somos</Button></li>
+          <li><Button variant='contained'>Contacto</Button></li>
           <li><Button variant='contained'>Encontrá</Button></li>
-          <li><Button variant='contained'>Publicá</Button></li>
-          <li><PetFav /></li>
+          <li><Carrito /></li>
         </ul>
         
       </header>

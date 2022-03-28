@@ -1,9 +1,9 @@
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import './PetFav.css';
+import './Carrito.css';
 import { Button } from '@mui/material';
 
 
-export default function PetFav() {
+export default function Carrito() {
     return (
     <>
         <div className="PetFav">
