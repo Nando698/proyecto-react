@@ -32,12 +32,12 @@ export default function ItemCount({stock}) {
 <div className='itemCount'>
     
     <div>
-        <Button onClick={restar}>-</Button>
+        <Button onClick={restar} disabled={contador == 0 ? true : null}>-</Button>
         <span>{contador}</span>
-        <Button onClick={sumar}>+</Button>
+        <Button onClick={sumar} disabled={contador == stock ? true : null}>+</Button>
     </div>
     <div>
-        <Button onClick={comprar}>COMPRAR</Button>
+        <Button onClick={comprar}>AGREGAR AL CARRITO</Button>
     </div>
     <div>stock:{stock - contador}</div>
 </div>

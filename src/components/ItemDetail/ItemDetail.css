@@ -1,0 +1,26 @@
+.itemDetail {
+    width:50%;
+    color:whitesmoke;
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    justify-content:space-around;
+    margin-top: 20px;
+    background-color: rgb(160, 119, 5);
+}
+
+.itemDetail img {
+    border: 2px solid rgb(78, 43, 2);
+    max-width: 20vw;
+    height: auto;
+}
+
+.itemDetail p {
+    margin-bottom: 30px;
+}
+
+.detailColumn {
+    display: flex;
+    flex-direction: column;
+    
+}
+

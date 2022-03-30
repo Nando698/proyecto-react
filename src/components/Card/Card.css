@@ -21,6 +21,9 @@
 #imagen {
     width: 100%;
     overflow:hidden;
+    min-height: 50%;
+    background-color: aliceblue;
+    
 }
 
 #datos {
@@ -53,10 +56,10 @@
     box-shadow: 2px 2px 15px;
 }
 
-.Card img {
+#imagen img {
     width: 100%;
     max-height:auto ;
-    
+    min-height: 50%;
     
 }
 
@@ -67,7 +70,7 @@
     align-items: center;
 }
 
-.cityText {
+.sizeText {
     background-color: rgb(73, 45, 45);
     height: 30px;
     display: flex;
