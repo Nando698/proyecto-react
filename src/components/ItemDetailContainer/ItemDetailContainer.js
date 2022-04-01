@@ -2,11 +2,13 @@ import "./ItemDetailContainer.css";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import React, { useState, useEffect } from 'react';
 import {getProducts} from '../../services/services';
-import mock from '../../mock'
 
-function ItemDetailContainer({iden}) {
+
+
+function ItemDetailContainer() {
   
-  const [item, setItem] = useState([])
+
+ /*  const [item, setItem] = useState([])
 
   const indice = (array, id) => {
     return (
@@ -21,14 +23,14 @@ function ItemDetailContainer({iden}) {
 
   
   
-  console.log(item, 'desde item')
+  console.log(item, 'desde item') */
   
   
   
   return(
 
     <div className="item-detail-c"> 
-    <ItemDetail product={item}/>
+    <ItemDetail/>
     </div>
   
   )}

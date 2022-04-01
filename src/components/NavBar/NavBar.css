@@ -1,10 +1,16 @@
+a, a:visited, a:active {
+    text-decoration: none;
+    color: white;
+}
+
+
 .navbar {
     width:100%
 }
 
 
 .img-logo {
-    width: 9vw;
+    width: 5vw;
     height: auto;
     margin-left: 2%;
 }

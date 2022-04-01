@@ -1,6 +1,6 @@
 import './Card.css';
 import ItemCount from '../ItemCount/ItemCount';
-
+import { Link } from 'react-router-dom';
 
 
 export default function Card(product) {
@@ -11,7 +11,7 @@ export default function Card(product) {
         <div className='Card'>
             
             <div id="imagen">
-                <img src={`./ropa/${product.product.img}`} alt="" />
+                <Link to={`productos/${product.product.id}`}><img src={`/ropa/${product.product.img}`} alt="" /></Link>
             </div>
             <div id="datos">
                 <h2 className="cardTitle">{product.product.title}</h2>

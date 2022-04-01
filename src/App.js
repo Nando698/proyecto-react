@@ -1,7 +1,17 @@
+//Componentes
 import NavBar from './components/NavBar/NavBar'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
+//Estilos
 import './App.css';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+
+//Pages
+import NotFound from './pages/NotFound';
+import HomePage from './pages/HomePage';
+import ContactPage from './pages/ContactPage';
+import CartPage from './pages/CartPage';
+import DetailPage from './pages/DetailPage'
+import CategoryPage from './pages/CategoryPage';
 
 
 function App() {
@@ -9,9 +19,18 @@ function App() {
 
   return (
     <div className="App">
+      <BrowserRouter>
       <NavBar />
-      <ItemListContainer />
-      <ItemDetailContainer iden={4} />
+      <Routes>
+      <Route path="/" element={<HomePage />}/>
+      <Route path="*" element={<NotFound />}/>
+      <Route path="/contacto" element={<ContactPage />}/>
+      <Route path="/carrito" element={<CartPage />}/>
+      <Route path="/productos/:id" element={<DetailPage />}/>
+      <Route path="/categorias/:category" element={<CategoryPage />}/>
+
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
