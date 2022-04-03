@@ -29,12 +29,12 @@ a, a:visited, a:active {
 }
 
 .menu li button {
-    background-color: #6b705c;
+    background-color: #343a40;
     margin-right: 20px;
 }
 
 .menu li button:hover {
-    background-color: #b7b7a4;
+    background-color: #212529;
 }
 
 .main-header {
@@ -43,7 +43,7 @@ a, a:visited, a:active {
     align-items: center;
     box-shadow: 5px 1px 5px rgba(0, 0, 0, 0.438);   
     padding: 15px 0px 15px 0px;
-    background-color: #ffe8d6;
+    background-color: #adb5bd;
 }
 
 

@@ -1,6 +1,6 @@
 //Componentes y dependencias
 import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 //Elementos
 import logo from '../../img/logo/liebre.png';
