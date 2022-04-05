@@ -1,4 +1,25 @@
-# Mascotas perdidas
+![alt text][logo]
 
-Proyecto de app para reunir mascotas extraviadas con sus dueños
+[logo]: https://github.com/Nando698/proyecto-react/blob/master/src/img/logo/liebre2.png "Logo Title Text 2"
 
+# e-Commerce app
+###### Autor: Fernando Diaz
+###### Vercel Link: https://mascotasperdidas-nando698.vercel.app/
+
+
+## Descripcion
+Proyecto de e-Commerce, desarrollado para el curso de react en CoderHouse.
+
+
+## Tecnologias utilizadas
+
+Este proyecto se esta construyendo con React y Material UI
+
+## Estado actual de la APP
+
+La app se encuentra en una etapa inicial de desarrollo. Ya se crearon las pages y el sitio es totalmente navegable.
+Para el test se esta utilizando un pequeño mock de datos, desde los cuales se generan las cards y los details del producto.
+La seccion de contacto y de carrito tienen un contenido provisorio con fines demostrativos, pero no se encuentran funcionales aun.
+
+
+![alt text](https://github.com/Nando698/proyecto-react/blob/master/public/www_screencapture_com_2022-4-5_10_14.gif "Logo Title Text 1")
