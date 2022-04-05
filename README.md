@@ -21,5 +21,7 @@ La app se encuentra en una etapa inicial de desarrollo. Ya se crearon las pages 
 Para el test se esta utilizando un pequeño mock de datos, desde los cuales se generan las cards y los details del producto.
 La seccion de contacto y de carrito tienen un contenido provisorio con fines demostrativos, pero no se encuentran funcionales aun.
 
+Las cards cuentan con un contador para agregar al carrito, limitado por stock, y no ejecutando ninguna funcion cuando esta en alguno de sus limites (0 o el maximo), a traves del atributo disabled del Button.
+
 
 ![alt text](https://github.com/Nando698/proyecto-react/blob/master/public/www_screencapture_com_2022-4-5_10_14.gif "Logo Title Text 1")
