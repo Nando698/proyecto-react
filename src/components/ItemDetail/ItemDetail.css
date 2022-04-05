@@ -1,11 +1,11 @@
 .itemDetail {
     width:50%;
-    color:whitesmoke;
+    color:rgb(57, 56, 56);
     font-family: Helvetica, sans-serif;
     display: flex;
     justify-content:space-around;
     margin-top: 20px;
-    background-color: rgb(160, 119, 5);
+    background-color: rgba(52, 58, 64, 0.2)
 }
 
 .itemDetail img {

@@ -11,7 +11,7 @@ export default function Card(product) {
         <div className='Card'>
             
             <div id="imagen">
-                <Link to={`productos/${product.product.id}`}><img src={`/ropa/${product.product.img}`} alt="" /></Link>
+                <Link to={`/productos/${product.product.id}`}><img src={`/ropa/${product.product.img}`} alt="" /></Link>
             </div>
             <div id="datos">
                 <h2 className="cardTitle">{product.product.title}</h2>
