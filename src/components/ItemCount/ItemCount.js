@@ -4,29 +4,27 @@ import React, {useState} from 'react';
 
 
 
-export default function ItemCount({stock}) {
+export default function ItemCount({stock, action, mostrar}) {
    
     const [contador, setContador] = useState(0)
 
 
-    const sumar = function() {
+    const sumar = () => {
         return (
-        contador == stock ? "" : setContador(contador+1)
+        contador == stock ? "" : setContador(contador+1),
+        action(contador+1)
         )
     }
 
-    const restar = function() {
+    const restar = () => {
         return (
-            contador == 0 ? "" : setContador(contador-1)
+            contador == 0 ? "" : setContador(contador-1),
+            action(contador-1)
+            
             )
     }
 
-    const comprar = () => {
-        
-        return (
-            contador < 1 ? alert("Debe seleccionar al menos un producto") :   
-                        alert("Usted agrego "+ contador + " productos al carrito ")
-        )}
+    
         
     return (
 <div className='itemCount'>
@@ -37,9 +35,8 @@ export default function ItemCount({stock}) {
         <Button onClick={sumar} disabled={contador == stock ? true : null}>+</Button>
     </div>
     <div>
-        <Button onClick={comprar}>AGREGAR AL CARRITO</Button>
+        <Button onClick={mostrar}>AGREGAR AL CARRITO</Button>
     </div>
-    <div>stock:{stock - contador}</div>
 </div>
     )
 }

@@ -18,7 +18,7 @@ export default function Card(product) {
                 <p className='priceText'>Precio: ${product.product.price}</p>
                 <p className='sizeText'>Talle: {product.product.size}</p>
             </div>   
-            <ItemCount stock={stock} />
+            
             
         </div>
 
