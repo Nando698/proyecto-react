@@ -24,6 +24,11 @@ export default function ItemCount({stock, action, mostrar}) {
             )
     }
 
+    const handleClick = () => {
+        mostrar()
+        setContador(0)
+    }
+
     
         
     return (
@@ -35,7 +40,7 @@ export default function ItemCount({stock, action, mostrar}) {
         <Button onClick={sumar} disabled={contador == stock ? true : null}>+</Button>
     </div>
     <div>
-        <Button onClick={mostrar}>AGREGAR AL CARRITO</Button>
+        <Button onClick={handleClick}>AGREGAR AL CARRITO</Button>
     </div>
 </div>
     )

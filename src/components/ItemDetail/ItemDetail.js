@@ -26,6 +26,8 @@ function ItemDetail() {
 
     const sumaDeProductos = (contadorHijo) => {
             return setContadorItems(contadorHijo)
+            
+            
     }
     
     const mostrar = () => {
@@ -33,6 +35,7 @@ function ItemDetail() {
             setVisible(true),
             setTimeout(()=> {
                 setVisible(false)}, 2000)
+                
             
         )}
 
