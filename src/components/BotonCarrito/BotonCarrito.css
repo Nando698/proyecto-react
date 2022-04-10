@@ -1,28 +1,11 @@
-.PetFav {
+.container-cart-button {
     display: flex;
-    width: 13vw;
-    align-items: center;
-    background-color: #6c757d;
-    border-radius: 10px;
-    justify-content: center;
-    height: 38px;
 }
 
-.PetFav p {
-    font-size: large;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: italic;
-    text-align: center;
-    
-}
 
-#creditText {
-    display: flex;
-    justify-content: center;
-}
 
 @media only screen and (max-width:769px) {
-    .PetFav {
+    .container-cart-button {
         width: 100%;
         height: 100%;
         border-radius: 0;

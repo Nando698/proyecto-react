@@ -1,33 +1,25 @@
 import './ItemDetail.css'
 import mock from '../../mock'
 import { useParams } from 'react-router-dom'; 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import { Button } from '@mui/material';
-import { Link } from 'react-router-dom';
+import CartContext from '../../context/CartContext';
 
-function ItemDetail() {
+
+function ItemDetail({product}) {
     
-    const {id, category} = useParams()
     
-    const [product, setProduct] = useState({})
-    const [contadorItems, setContadorItems] = useState(0)
+    
+    const {cartProducts, addProd} = useContext(CartContext)
+    
+    const [contadorItems, setContadorItems] = useState(1)
+    
     const [visible, setVisible] = useState(false)
-    const productFilter = () => {
-        return mock.map( (elemento) => {
-            if(elemento.id == id) {
-
-                return setProduct(elemento)
-            }})}
     
-        useEffect(() => {
-            productFilter()
-        },[])
-
     const sumaDeProductos = (contadorHijo) => {
-            return setContadorItems(contadorHijo)
-            
-            
+        return setContadorItems(contadorHijo)
+
     }
     
     const mostrar = () => {
@@ -38,7 +30,12 @@ function ItemDetail() {
                 
             
         )}
-
+    
+    const add = (e) => {
+        e.stopPropagation()
+        addProd(product,contadorItems)
+        mostrar()
+    }
 
     return ( 
 
@@ -51,12 +48,11 @@ function ItemDetail() {
                 <p>Precio: ${product.price}</p>
                 <p>Talle: {product.size}</p>
                 <p>Categoria: {product.category}</p>
-                <ItemCount stock={10} action={sumaDeProductos} mostrar={mostrar} />
+                <ItemCount stock={10} action={sumaDeProductos} mostrar={mostrar} dataProduct={product}/>
                 <div className={visible == true ? 'visible' : 'invisible'}>
                     {`Usted agregó ${contadorItems} items`}
                 </div>
-                
-                <Link to={'/carrito'}><Button>Finalizar compra</Button></Link>
+                <Button onClick={add}>Agregar</Button>
             </div>
         </div>
 

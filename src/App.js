@@ -13,24 +13,27 @@ import CartPage from './pages/CartPage';
 import DetailPage from './pages/DetailPage'
 import CategoryPage from './pages/CategoryPage';
 
+//context
+import {CartProvider} from './context/CartContext';
 
 function App() {
 
 
   return (
     <div className="App">
-      <BrowserRouter>
-      <NavBar />
-      <Routes>
-      <Route path="/" element={<HomePage />}/>
-      <Route path="*" element={<NotFound />}/>
-      <Route path="/contacto" element={<ContactPage />}/>
-      <Route path="/carrito" element={<CartPage />}/>
-      <Route path="/productos/:id" element={<DetailPage />}/>
-      <Route path="/categorias/:category" element={<CategoryPage />}/>
-
-      </Routes>
-      </BrowserRouter>
+      <CartProvider>
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/contacto" element={<ContactPage />} />
+            <Route path="/carrito" element={<CartPage />} />
+            <Route path="/productos/:id" element={<DetailPage />} />
+            <Route path="/categorias/:category" element={<CategoryPage />} />
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
     </div>
   );
 }

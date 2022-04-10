@@ -1,36 +1,37 @@
 import "./ItemDetailContainer.css";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import React, { useState, useEffect } from 'react';
-import {getProducts} from '../../services/services';
-
+import mock from '../../mock'
+import { useParams } from "react-router-dom";
 
 
 function ItemDetailContainer() {
   
+  const {id, category} = useParams()
+  
+  const [product, setProduct] = useState({})
 
- /*  const [item, setItem] = useState([])
+  const productFilter = () => {
+    return mock.filter((elemento) => {
+      if (elemento.id == id) {
 
-  const indice = (array, id) => {
-    return (
-    array.findIndex(prenda => prenda.id == id)
-    )}
-
+        return setProduct(elemento)
+      }
+    })
+  }
 
   useEffect(() => {
-    
-    getProducts().then((resu) => setItem(resu[indice(resu,iden)]))  
+    productFilter()
+    console.log('desde container', product)
   }, [])
 
-  
-  
-  console.log(item, 'desde item') */
   
   
   
   return(
 
     <div className="item-detail-c"> 
-    <ItemDetail/>
+    <ItemDetail product={product}/>
     </div>
   
   )}

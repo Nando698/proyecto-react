@@ -10,8 +10,8 @@
     border-radius: 2px;
     width: 12vw;
     overflow: hidden;
-    height: 27vw;
     font-family: 'Archivo', sans-serif;
+    padding-bottom: 50px;
 }
 
 .cardTitle {

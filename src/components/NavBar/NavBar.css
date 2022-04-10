@@ -3,6 +3,18 @@ a, a:visited, a:active {
     color: white;
 }
 
+details summary {
+    list-style: none;
+}
+
+details {
+    position: absolute;
+}
+
+#detalleEnCarrito {
+    background-color: #c2c2c2;
+}
+
 
 .navbar {
     width:100%

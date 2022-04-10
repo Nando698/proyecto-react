@@ -1,12 +1,11 @@
 import './ItemCount.css';
 import { Button } from '@mui/material';
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 
 
-
-export default function ItemCount({stock, action, mostrar}) {
+export default function ItemCount({stock, action, mostrar, dataProduct}) {
    
-    const [contador, setContador] = useState(0)
+    const [contador, setContador] = useState(1)
 
 
     const sumar = () => {
@@ -18,7 +17,7 @@ export default function ItemCount({stock, action, mostrar}) {
 
     const restar = () => {
         return (
-            contador == 0 ? "" : setContador(contador-1),
+            contador == 1 ? "" : setContador(contador-1),
             action(contador-1)
             
             )
@@ -35,12 +34,11 @@ export default function ItemCount({stock, action, mostrar}) {
 <div className='itemCount'>
     
     <div>
-        <Button onClick={restar} disabled={contador == 0 ? true : null}>-</Button>
+        <Button onClick={restar} disabled={contador == 1 ? true : null}>-</Button>
         <span>{contador}</span>
         <Button onClick={sumar} disabled={contador == stock ? true : null}>+</Button>
     </div>
     <div>
-        <Button onClick={handleClick}>AGREGAR AL CARRITO</Button>
     </div>
 </div>
     )

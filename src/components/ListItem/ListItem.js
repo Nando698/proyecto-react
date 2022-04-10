@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Card from '../Card/Card';
 import './ListItem.css';
 import { CircularProgress } from '@mui/material';
-import mock from '../../mock'
 import {getProducts} from '../../services/services'
 
 
