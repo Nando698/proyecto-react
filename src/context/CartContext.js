@@ -6,12 +6,20 @@ const CartProvider = ({children}) => {
 
     const [cartProducts, setCartProducts] = useState([])
 
-/*     const addProd = (prod) => {
-        let exist = cartProducts.find(cartProduct => cartProduct.id === prod.id)
-        !exist && setCartProducts(cartProducts => [...cartProducts, prod])
+    const calcularTotal = () => {
+        
+        let total = 0
+        
+        cartProducts.map( (cartProduct) => {
+            total = cartProduct.price + total
+        })
+        
+        return total
+        
     }
- */
 
+
+// Funcion para agregar al carrito
     const addProd = (item, qty) => {
         if(cartProducts.some(el => el.id === item.id)){
             
@@ -34,11 +42,12 @@ const CartProvider = ({children}) => {
         setCartProducts(cartProducts.filter( cartProduct => cartProduct.id !== product.id))
     }
 
-
+//Defino todo lo que voy a pasar
     const data = {
         cartProducts,
         addProd,
-        deleteProduct
+        deleteProduct,
+        calcularTotal
     }
 
     return (

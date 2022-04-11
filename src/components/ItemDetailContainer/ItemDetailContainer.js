@@ -22,7 +22,6 @@ function ItemDetailContainer() {
 
   useEffect(() => {
     productFilter()
-    console.log('desde container', product)
   }, [])
 
   

@@ -77,7 +77,7 @@ export default function Carrito() {
 
         {cartProducts.map((cartProduct) => {
           return (
-            <>
+            <div>
               <MenuItem className="item-cart-modal" key={cartProduct.id}>
                 <div className="item-cart-modal__info">
                   <p>{cartProduct.title}</p>
@@ -85,11 +85,11 @@ export default function Carrito() {
                   <span> x {cartProduct.qty}</span>
                 </div>
                 <div className="item-cart-modal__action">
-                  <DeleteIcon />
+                  <DeleteIcon onClick={() => deleteProduct(cartProduct)} />
                 </div>
               </MenuItem>
               <Divider />
-            </>
+            </div>
           );
         })}
 

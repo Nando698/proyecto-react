@@ -1,59 +1,72 @@
-import * as React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import './Cart.css';
+import {useState, useContext} from 'react'
+import Container from '@mui/material/Container';
+import { Button } from '@mui/material';
+import CartContext from '../../context/CartContext';
+import DeleteIcon from '@mui/icons-material/Delete';
 
-function createData(name, price, units, shiping, subtotal) {
-  return { name, price, units, shiping, subtotal };
+
+function Cart() {
+
+  
+    const { cartProducts, deleteProduct, calcularTotal } = useContext(CartContext)
+
+  return(
+
+    <Container className='container-general'> 
+            <div className='cart-section'>
+                <div className='col-cart-table__head'>
+                    <h2>Producto</h2>
+                    <h2>Descripcion</h2>
+                    <h2>Precio Unitario</h2>
+                    <h2>Cantidad</h2>
+                    <h2>Quitar</h2>
+                </div>
+                {cartProducts.map( (cartProduct) => {
+                    const { price, img, title, size, id, qty } = cartProduct
+                    return(
+                        <div className='cart-table__content' key={id}>
+                            <div className='cart-table__content-img'>
+                                <img src={`/ropa/${img}`} />
+                            </div>
+                            <div className='cart-table__content-title'>
+                                <p>{title}</p>
+                                <span>Talle : <b>{size}</b></span>
+                            </div>
+                            <div className='cart-table__content-price'>
+                                <p>$ {price}</p>
+                            </div>
+                            <div className='cart-table__content-quantity'>
+                                <p>{qty}</p>
+                            </div>
+                            <div className='cart-table__content-price'>
+                                <button className='btn-delete' onClick={() => deleteProduct(cartProduct)}>
+                                    <DeleteIcon />
+                                </button>
+                            </div>
+                        </div>
+                    )
+                })}
+                
+                <div className='cart-footer'>
+                    <Button className='btn-custom'>Continuar comprando</Button>
+                    <div className='cart-checkout-details'>
+                        <div className='cart-checkout__subtotal'>
+                            <p>Subtotal</p>
+                            <span>$ {calcularTotal}</span>
+                        </div>
+                        <div className='cart-checkout__total'>
+                            <p>Total</p>
+                            <span>$ {calcularTotal}</span>
+                        </div>
+                        <Button className='btn-custom'>Completar Compra</Button>
+                    </div>
+                </div>
+            </div>
+        </Container>
+
+  )
 }
 
-const rows = [
-  createData('Remera cazafantasmas', 2000, 1, "si", 2000),
-  createData('Remera better luck', 2500, 1, "si", 2000),
-  createData('Remera blanca nieves', 2800, 3, "si", 6400),
-  createData('Remera princess', 3000, 3, "si", 9000),
-  createData('', '','', 'SUBTOTAL', 5 )
-  ];
-export default function BasicTable() {
-  return (
-    <div className='tablaCart'>
-    
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Item</TableCell>
-            <TableCell align="right">Precio unitario</TableCell>
-            <TableCell align="right">Cantidad</TableCell>
-            <TableCell align="right">Envio</TableCell>
-            <TableCell align="right">Subtotal</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            
-            <TableRow key={row.name}>
-            <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.price}</TableCell>
-              <TableCell align="right">{row.units}</TableCell>
-              <TableCell align="right">{row.shiping}</TableCell>
-              <TableCell align="right">{row.price*row.units}</TableCell>
-            </TableRow>
 
-               
-
-            
-            
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-    </div>
-  );
-}
+export default Cart;
