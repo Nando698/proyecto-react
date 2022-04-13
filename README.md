@@ -4,7 +4,7 @@
 
 # e-Commerce app
 ###### Autor: Fernando Diaz
-###### Vercel Link: https://mascotasperdidas-nando698.vercel.app/
+###### Vercel Link: https://proyecto-react-rho.vercel.app/
 
 
 ## Descripcion
