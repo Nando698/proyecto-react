@@ -47,6 +47,7 @@ export default function Carrito() {
             mt: 1.5,
             "& .MuiAvatar-root": {
               width: 32,
+              justifyContent: "space-between",
               height: 32,
               ml: -0.5,
               mr: 1,
@@ -69,9 +70,9 @@ export default function Carrito() {
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
         {cartProducts == 0 ? (
-          <p>No agregaste nada al carrito...</p>
+          <p className="carritoVacio">No agregaste nada al carrito...</p>
         ) : (
-          <p>Carrito</p>
+          <p className="carritoLleno">Carrito</p>
         )}
         <Divider />
 
@@ -85,7 +86,7 @@ export default function Carrito() {
                   <span> x {cartProduct.qty}</span>
                 </div>
                 <div className="item-cart-modal__action">
-                  <DeleteIcon onClick={() => deleteProduct(cartProduct)} />
+                  <DeleteIcon key={cartProduct.id} onClick={() => deleteProduct(cartProduct)} />
                 </div>
               </MenuItem>
               <Divider />
@@ -94,9 +95,9 @@ export default function Carrito() {
         })}
 
         <div className="footer-modal-cart">
-          <Button sx={{ backgroundColor: "green" }}>
+          {cartProducts == 0 ? '' : (<Button sx={{ backgroundColor: "green" }}>
             <Link to="/carrito">Iniciar la compra</Link>
-          </Button>
+          </Button>)} 
         </div>
       </Menu>
     </div>

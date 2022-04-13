@@ -4,6 +4,7 @@ import Container from '@mui/material/Container';
 import { Button } from '@mui/material';
 import CartContext from '../../context/CartContext';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { Link } from 'react-router-dom';
 
 
 function Cart() {
@@ -15,31 +16,35 @@ function Cart() {
 
     <Container className='container-general'> 
             <div className='cart-section'>
-                <div className='col-cart-table__head'>
+                <div className='col-cart-tabla__cabecera'>
                     <h2>Producto</h2>
                     <h2>Descripcion</h2>
                     <h2>Precio Unitario</h2>
                     <h2>Cantidad</h2>
+                    <h2>Sub Total</h2>
                     <h2>Quitar</h2>
                 </div>
                 {cartProducts.map( (cartProduct) => {
                     const { price, img, title, size, id, qty } = cartProduct
                     return(
-                        <div className='cart-table__content' key={id}>
-                            <div className='cart-table__content-img'>
+                        <div className='cart-tabla' key={id}>
+                            <div className='cart-tabla-img'>
                                 <img src={`/ropa/${img}`} />
                             </div>
-                            <div className='cart-table__content-title'>
+                            <div className='cart-tabla-titulo'>
                                 <p>{title}</p>
                                 <span>Talle : <b>{size}</b></span>
                             </div>
-                            <div className='cart-table__content-price'>
+                            <div className='cart-tabla-price'>
                                 <p>$ {price}</p>
                             </div>
-                            <div className='cart-table__content-quantity'>
+                            <div className='cart-tabla-quantity'>
                                 <p>{qty}</p>
                             </div>
-                            <div className='cart-table__content-price'>
+                            <div className='cart-tabla-stotal'>
+                                <p>{price*qty}</p>
+                            </div>
+                            <div className='cart-tabla-price'>
                                 <button className='btn-delete' onClick={() => deleteProduct(cartProduct)}>
                                     <DeleteIcon />
                                 </button>
@@ -49,15 +54,15 @@ function Cart() {
                 })}
                 
                 <div className='cart-footer'>
-                    <Button className='btn-custom'>Continuar comprando</Button>
+                <Link to={'/'}><Button className='btn-custom'>Continuar comprando</Button></Link>
                     <div className='cart-checkout-details'>
                         <div className='cart-checkout__subtotal'>
                             <p>Subtotal</p>
-                            <span>$ {calcularTotal}</span>
+                            <span>$ {calcularTotal()}</span>
                         </div>
                         <div className='cart-checkout__total'>
                             <p>Total</p>
-                            <span>$ {calcularTotal}</span>
+                            <span>$ {calcularTotal()}</span>
                         </div>
                         <Button className='btn-custom'>Completar Compra</Button>
                     </div>

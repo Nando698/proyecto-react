@@ -11,7 +11,7 @@ const CartProvider = ({children}) => {
         let total = 0
         
         cartProducts.map( (cartProduct) => {
-            total = cartProduct.price + total
+            total = cartProduct.price * cartProduct.qty + total
         })
         
         return total

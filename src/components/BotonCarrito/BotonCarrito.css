@@ -1,8 +1,24 @@
 .container-cart-button {
     display: flex;
+    
 }
 
+.item-cart-modal__info {
+    display: flex;
+    justify-content: flex-end;
+}
 
+.carritoVacio {
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+}
+
+.carritoLleno {
+    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+}
 
 @media only screen and (max-width:769px) {
     .container-cart-button {

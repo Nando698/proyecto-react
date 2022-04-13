@@ -8,6 +8,10 @@
     background-color: rgba(52, 58, 64, 0.2)
 }
 
+#cartelAgregado {
+    transition: all linear 2s ;
+}
+
 .itemDetail img {
     border: 2px solid rgb(78, 43, 2);
     max-width: 20vw;

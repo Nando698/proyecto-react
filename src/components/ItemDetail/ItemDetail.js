@@ -49,7 +49,7 @@ function ItemDetail({product}) {
                 <p>Talle: {product.size}</p>
                 <p>Categoria: {product.category}</p>
                 <ItemCount stock={10} action={sumaDeProductos} mostrar={mostrar} dataProduct={product}/>
-                <div className={visible == true ? 'visible' : 'invisible'}>
+                <div id='cartelAgregado' className={visible == true ? 'visible' : 'invisible'}>
                     {`Usted agregó ${contadorItems} items`}
                 </div>
                 <Button onClick={add}>Agregar</Button>

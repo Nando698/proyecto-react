@@ -1,61 +1,65 @@
-.cart-section {}
 
-.cart-section .col-cart-table__head {
+.cart-section .col-cart-tabla__cabecera {
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid #cccccc;
     margin-bottom: 20px;
+    margin-top: 50px;
 }
 
-.cart-section .col-cart-table__head h2 {
+.cart-section .col-cart-tabla__cabecera h2 {
     font-size: 14px;
     text-align: left;
 }
 
-.cart-section .col-cart-table__head h2:nth-of-type(1) {
+.cart-section .col-cart-tabla__cabecera h2:nth-of-type(1) {
     width: 10%;
 }
 
-.cart-section .col-cart-table__head h2:nth-of-type(2) {
+.cart-section .col-cart-tabla__cabecera h2:nth-of-type(2) {
     width: 40%;
 }
 
-.cart-section .col-cart-table__head h2:nth-of-type(3) {
+.cart-section .col-cart-tabla__cabecera h2:nth-of-type(3) {
     width: 10%;
 }
 
-.cart-section .col-cart-table__head h2:nth-of-type(4) {width: 10%;}
+.cart-section .col-cart-tabla__cabecera h2:nth-of-type(4) {width: 10%;}
 
-.cart-section .col-cart-table__head h2:nth-of-type(5) {
+.cart-section .col-cart-tabla__cabecera h2:nth-of-type(5) {
     width: 10%;
 }
 
-.cart-table__content {
+.cart-section .col-cart-tabla__cabecera h2:nth-of-type(6) {
+  width: 5%;
+}
+
+.cart-tabla {
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ccc;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgb(154, 147, 147);
 }
 
-.cart-table__content-img {
+.cart-tabla-img {
     width: 10%;
     overflow: hidden;
 }
 
-.cart-table__content-img img {
+.cart-tabla-img img {
     width: 100%;
 }
 
-.cart-table__content-title {
+.cart-tabla-titulo {
     width: 40%;
 }
 
-.cart-table__content-price {
+.cart-tabla-price {
     width: 10%;
 }
 
-.cart-table__content-quantity {
+.cart-tabla-quantity {
     width: 10%;
 }
 .cart-footer {
@@ -73,7 +77,6 @@
 }
 
 .cart-checkout-details {
-  background: #fafafa;
   padding-top: 10px;
 }
 
@@ -113,9 +116,12 @@ button.btn-delete {
   height: 40px;
   box-shadow: 1px 1px 5px #00000042;
   cursor: pointer;
+  color: rgba(255, 0, 0, 0.575);
   transition: all 0.2s ease;
+  margin-left: 3.5vw;
 }
 
 button.btn-delete:hover {
   transform: scale(1.09);
+  color:red;
 }
