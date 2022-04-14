@@ -16,6 +16,9 @@ function Cart() {
 
     <Container className='container-general'> 
             <div className='cart-section'>
+                
+                {(cartProducts.length !== 0) ? (
+                
                 <div className='col-cart-tabla__cabecera'>
                     <h2>Producto</h2>
                     <h2>Descripcion</h2>
@@ -24,6 +27,8 @@ function Cart() {
                     <h2>Sub Total</h2>
                     <h2>Quitar</h2>
                 </div>
+
+                ) : <p>No hay ningun producto en tu carrito</p>}
                 {cartProducts.map( (cartProduct) => {
                     const { price, img, title, size, id, qty } = cartProduct
                     return(
