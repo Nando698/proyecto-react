@@ -11,17 +11,24 @@ function ItemDetailContainer() {
   
   const [product, setProduct] = useState({})
 
-  const productFilter = () => {
+  /* const productFilter = () => {
     return mock.filter((elemento) => {
       if (elemento.id == id) {
 
         return setProduct(elemento)
       }
     })
+  } */
+
+
+  function getProduct(id, products) {
+    const product = products.find(product => product.id == id)
+    return product
   }
 
   useEffect(() => {
-    productFilter()
+    const productoEncontrado = getProduct(id, mock) 
+    setProduct ( productoEncontrado)
   }, [])
 
   

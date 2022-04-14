@@ -70,7 +70,7 @@ export default function Carrito() {
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
         {cartProducts == 0 ? (
-          <p className="carritoVacio">No agregaste nada al carrito...</p>
+          <p className="carritoVacio" >No agregaste nada al carrito...</p>
         ) : (
           <p className="carritoLleno">Carrito</p>
         )}
@@ -78,8 +78,8 @@ export default function Carrito() {
 
         {cartProducts.map((cartProduct) => {
           return (
-            <div>
-              <MenuItem className="item-cart-modal" key={cartProduct.id}>
+            <div key={cartProduct.id}>
+              <MenuItem className="item-cart-modal" sx={{justifyContent: "flex-end"}}>
                 <div className="item-cart-modal__info">
                   <p>{cartProduct.title}</p>
                   <span>$ {cartProduct.price}</span>
@@ -95,7 +95,7 @@ export default function Carrito() {
         })}
 
         <div className="footer-modal-cart">
-          {cartProducts == 0 ? '' : (<Button sx={{ backgroundColor: "green" }}>
+          {cartProducts == 0 ? '' : (<Button sx={{ backgroundColor: "#DDBEA9", width: "100%", borderRadius:"0" }}>
             <Link to="/carrito">Iniciar la compra</Link>
           </Button>)} 
         </div>

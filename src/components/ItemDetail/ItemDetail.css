@@ -37,3 +37,29 @@
 }
 
 
+@media only screen and (max-width:769px) {
+    
+    
+    .itemDetail{
+        width: 100%;
+    }
+
+    .itemDetail p {
+        margin-bottom: 10px;
+        padding: 0;
+        
+    }
+
+     .imgDetail {
+        width: 80%;
+        padding: 0;
+    }
+
+    .imgDetail img {
+        width: 100%;
+        margin: 0;
+        max-width: none;
+    }
+}
+
+

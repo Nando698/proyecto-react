@@ -36,13 +36,13 @@ function Cart() {
                                 <span>Talle : <b>{size}</b></span>
                             </div>
                             <div className='cart-tabla-price'>
-                                <p>$ {price}</p>
+                                <span>${price}</span>
                             </div>
                             <div className='cart-tabla-quantity'>
                                 <p>{qty}</p>
                             </div>
                             <div className='cart-tabla-stotal'>
-                                <p>{price*qty}</p>
+                                <p>${price*qty}</p>
                             </div>
                             <div className='cart-tabla-price'>
                                 <button className='btn-delete' onClick={() => deleteProduct(cartProduct)}>
@@ -64,7 +64,7 @@ function Cart() {
                             <p>Total</p>
                             <span>$ {calcularTotal()}</span>
                         </div>
-                        <Button className='btn-custom'>Completar Compra</Button>
+                        <Button sx={{color:"white", backgroundColor: "black"}}>Completar Compra</Button>
                     </div>
                 </div>
             </div>
