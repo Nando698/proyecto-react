@@ -13,6 +13,7 @@ function ListItem() {
 
   useEffect( ()=> {
     getProducts().then(respuesta => setItems(respuesta))
+    
   },[])
 
 
@@ -21,7 +22,6 @@ function ListItem() {
         
         
         {
-        
         items.length ? (
         
         items.map((prod) => {

@@ -26,8 +26,8 @@ function NavBar() {
           
           <li><Link to={'/'}><Button variant='contained'>Inicio</Button></Link></li>
           <li><Link to={'/contacto'}><Button variant='contained'>Contacto</Button></Link></li>
-          <li><Link to={'/categorias/Hombre'}><Button variant='contained'>Hombre</Button></Link></li>
-          <li><Link to={'/categorias/Mujer'}><Button variant='contained'>Mujer</Button></Link></li>
+          <li><Link to={'/categorias/hombre'}><Button variant='contained'>Hombre</Button></Link></li>
+          <li><Link to={'/categorias/mujer'}><Button variant='contained'>Mujer</Button></Link></li>
           <li><BotonCarrito /></li>
         </ul>
         

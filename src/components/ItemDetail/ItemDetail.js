@@ -1,6 +1,4 @@
 import './ItemDetail.css'
-import mock from '../../mock'
-import { useParams } from 'react-router-dom'; 
 import React, { useState, useEffect, useContext } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import { Button } from '@mui/material';
@@ -38,11 +36,11 @@ function ItemDetail({product}) {
     }
 
     return ( 
-
         <div className='itemDetail'>
             <div className="imgDetail">
                 <img src={`/ropa/${product.img}`} />
             </div>
+            {console.log('desde detail', product)}
             <div className='detailColumn'>
                 <h2>{product.title}</h2>
                 <p>Precio: ${product.price}</p>

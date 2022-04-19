@@ -1,36 +1,37 @@
 import "./ItemDetailContainer.css";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import React, { useState, useEffect } from "react";
-import mock from "../../mock";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { doc, getDoc } from "firebase/firestore";
+import database from "../../services/firebase";
 
 function ItemDetailContainer() {
-  const { id, category } = useParams();
+  const { id } = useParams();
 
   const [product, setProduct] = useState({});
 
-  /* const productFilter = () => {
-    return mock.filter((elemento) => {
-      if (elemento.id == id) {
 
-        return setProduct(elemento)
-      }
-    })
-  } */
+  const getProduct = async () => {
+    const docRef = doc(database, "products", id);
+    const docSnap = await getDoc(docRef);
 
-  function getProduct(id, products) {
-    const product = products.find((product) => product.id == id);
-    return product;
-  }
+    if (docSnap.exists()) {
+      console.log("Document data:", docSnap.data());
+      let product = docSnap.data();
+      product.id = docSnap.id;
+      setProduct(product);
+    } else {
+      console.log("No such document!");
+    }
+  };
 
   useEffect(() => {
-    const productoEncontrado = getProduct(id, mock);
-    setProduct(productoEncontrado);
-  }, []);
+    getProduct();
+  }, [id]);
 
   return (
     <div className="item-detail-c">
-      <ItemDetail product={product} />
+      {product ? <ItemDetail product={product} /> : ""}
     </div>
   );
 }
