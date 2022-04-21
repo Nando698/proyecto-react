@@ -21,7 +21,7 @@ export default function Carrito() {
   };
 
   return (
-    <div className="container-cart-button">
+    <div className="container-cart-button" key={1}>
       <ShoppingCartIcon
         onClick={handleClick}
         size="small"

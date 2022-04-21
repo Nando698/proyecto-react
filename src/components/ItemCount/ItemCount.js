@@ -3,7 +3,7 @@ import { Button } from '@mui/material';
 import React, {useState, useContext} from 'react';
 
 
-export default function ItemCount({stock, action, mostrar, dataProduct}) {
+export default function ItemCount({stock, action}) {
    
     const [contador, setContador] = useState(1)
 
@@ -23,10 +23,7 @@ export default function ItemCount({stock, action, mostrar, dataProduct}) {
             )
     }
 
-    const handleClick = () => {
-        mostrar()
-        setContador(0)
-    }
+ 
 
     
         

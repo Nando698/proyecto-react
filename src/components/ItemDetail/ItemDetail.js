@@ -40,13 +40,14 @@ function ItemDetail({product}) {
             <div className="imgDetail">
                 <img src={`/ropa/${product.img}`} />
             </div>
+            {console.log('desde card', product)}
             {console.log('desde detail', product)}
             <div className='detailColumn'>
                 <h2>{product.title}</h2>
                 <p>Precio: ${product.price}</p>
                 <p>Talle: {product.size}</p>
                 <p>Categoria: {product.category}</p>
-                <ItemCount stock={10} action={sumaDeProductos} mostrar={mostrar} dataProduct={product}/>
+                <ItemCount stock={10} action={sumaDeProductos}/>
                 <div id='cartelAgregado' className={visible == true ? 'visible' : 'invisible'}>
                     {`Usted agregó ${contadorItems} items`}
                 </div>

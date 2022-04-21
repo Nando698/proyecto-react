@@ -11,7 +11,7 @@
     width: 12vw;
     overflow: hidden;
     font-family: 'Archivo', sans-serif;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
 }
 
 .cardTitle {
