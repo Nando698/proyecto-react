@@ -122,10 +122,19 @@ button.btn-delete:hover {
   color:red;
 }
 
+form {
+  padding: 2vw;
+}
+
+form * {
+  display: block;
+  height: 2.5vw;
+  width: 30vw;
+}
 
 @media only screen and (max-width:769px) {
-
-
+  
+  
 
 
   .cart-section .col-cart-tabla__cabecera h2 {
@@ -198,4 +207,16 @@ button.btn-delete {
   box-shadow: none;
 }
 
+form {
+  width: 100%;
 }
+
+
+form * {
+  width: 100%;
+}
+
+
+
+}
+
