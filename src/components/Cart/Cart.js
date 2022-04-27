@@ -137,11 +137,11 @@ function Cart() {
                         <p>Su numero de orden es: {successOrder}</p>
                     </div>
                 ) : (
-
-            <form onSubmit={handleSubmit}>
-            <input type='text' name='name' placeholder="Nombre" onChange={handleChange} value={formData.name} />
-            <input type='number' name='phone' placeholder="Telefono" onChange={handleChange} value={formData.phone}/>
-            <input type='mail' name='mail' placeholder="Correo electronico" onChange={handleChange} value={formData.mail}/>
+                  <form onSubmit={handleSubmit}>
+              <h2>Complete sus datos</h2>
+            <input required type='text' name='name' placeholder="Nombre" onChange={handleChange} value={formData.name} />
+            <input required type='number' name='phone' placeholder="Telefono" onChange={handleChange} value={formData.phone}/>
+            <input required type='mail' name='mail' placeholder="Correo electronico" onChange={handleChange} value={formData.mail}/>
             <Button type='submit'>Comprar</Button>
             
             </form>
